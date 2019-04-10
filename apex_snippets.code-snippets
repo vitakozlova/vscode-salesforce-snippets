@@ -59,6 +59,19 @@
 		],
 		"description": "Apex Scheduler Class"
 	},
+	"apex_rest": {
+		"prefix": "apex_rest",
+		"body": [
+			"@RestResource(urlMapping='/${1:endpoint}')",
+			"global with sharing class REST_${2:ClassName} {",
+			"\t@HttpPost",
+			"\tglobal static String doPost() {",
+				"\t\treturn null;",
+			"\t}",
+			"}"
+		],
+		"description": "Apex Rest Class"
+	},
 	"dbi": {
 		"prefix": "dbi",
 		"body": [
