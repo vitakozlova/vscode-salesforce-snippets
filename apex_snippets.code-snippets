@@ -1,0 +1,69 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	"apex_test": {
+		"prefix": "apex_test",
+		"body": [
+			"@isTest",
+			"public class ${1:ClassName} {",
+				"\t@testSetup",
+				"\tstatic void setupTestData() {",
+					"\t\t",
+				"\t}",
+				"\tstatic testmethod void testMethod1() {",
+					"\t\t",
+				"\t}",
+			"}"
+		],
+		"description": "Apex Test Class"
+	},
+	"apex_trigger": {
+		"prefix": "apex_trigger",
+		"body": [
+			"trigger ${1:TriggerName} on ${2:ObjectName}(before insert, before update, before delete, after insert, after update, after delete) {",
+				"\t\t",
+			"}"
+		],
+		"description": "Apex Trigger Class"
+	},
+	"apex_batch": {
+		"prefix": "apex_batch",
+		"body": [
+			"global class ${1:ClassNameBatch} implements Database.Batchable<sObject>{",
+				"\tglobal Database.QueryLocator start(Database.BatchableContext BC) {",
+					"\t\tString query=''",
+					"\t\treturn Database.getQueryLocator(query);",
+				"\t}",
+				"\tglobal void execute(Database.BatchableContext BC, List<sObject> scope) {",
+					"\t\t",
+				"\t}",
+				"\tglobal void finish(Database.BatchableContext BC) {",
+					"\t\t",
+				"\t}",
+			"}"
+		],
+		"description": "Apex Batch Class"
+	},
+	"apex_scheduler": {
+		"prefix": "apex_scheduler",
+		"body": [
+			"global class ${1:ClassNameSch} implements Schedulable {",
+				"\tglobal void execute(SchedulableContext sc) {",
+				   "\t\t",
+				"\t}",
+			"}"
+		],
+		"description": "Apex Scheduler Class"
+	},
+	"dbi": {
+		"prefix": "dbi",
+		"body": [
+			"System.debug(LoggingLevel.INFO, '*** $0 ' + $0);"
+		],
+		"description": "System log Info"
+	}
+}
