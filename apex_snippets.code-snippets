@@ -14,7 +14,8 @@
 				"\tstatic void setupTestData() {",
 					"\t\t",
 				"\t}",
-				"\tstatic testmethod void testMethod1() {",
+				"\t@isTest",
+				"\tstatic void testMethod1() {",
 					"\t\t",
 				"\t}",
 			"}"
