@@ -36,7 +36,7 @@
 	"apex_async_trigger": {
 		"prefix": "apex_async_trigger",
 		"body": [
-			"trigger ${1:TriggerName} on ${2:ObjectName}ChangeEvent (before insert, before update, before delete, after insert, after update, after delete) {",
+			"trigger ${1:TriggerName} on ${2:ObjectName}ChangeEvent (after insert) {",
 				"\t\t",
 			"}"
 		],
