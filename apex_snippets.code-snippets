@@ -27,7 +27,16 @@
 	"apex_trigger": {
 		"prefix": "apex_trigger",
 		"body": [
-			"trigger ${1:TriggerName} on ${2:ObjectName}(before insert, before update, before delete, after insert, after update, after delete) {",
+			"trigger ${1:TriggerName} on ${2:ObjectName} (before insert, before update, before delete, after insert, after update, after delete) {",
+				"\t\t",
+			"}"
+		],
+		"description": "Apex Trigger Class"
+	},
+	"apex_async_trigger": {
+		"prefix": "apex_async_trigger",
+		"body": [
+			"trigger ${1:TriggerName} on ${2:ObjectName}ChangeEvent (before insert, before update, before delete, after insert, after update, after delete) {",
 				"\t\t",
 			"}"
 		],
@@ -36,7 +45,7 @@
 	"apex_batch": {
 		"prefix": "apex_batch",
 		"body": [
-			"global class ${1:ClassNameBatch} implements Database.Batchable<sObject>{",
+			"global class ${1:ClassNameBatch} implements Database.Batchable<sObject> {",
 				"",
 				"\tglobal Database.QueryLocator start(Database.BatchableContext BC) {",
 					"\t\tString query = ''",
